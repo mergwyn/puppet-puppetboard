@@ -139,6 +139,7 @@ class puppetboard (
         ensure   => present,
         provider => git,
         user     => $user,
+        owner    => $user, # https://github.com/puppetlabs/puppetlabs-vcsrepo/issues/535
         source   => $git_source,
         revision => $revision,
         require  => [
